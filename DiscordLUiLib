@@ -565,7 +565,7 @@ function DiscordLib:Window(text)
 	UserSettingsPadUser.BackgroundTransparency = 1.000
 	UserSettingsPadUser.Font = Enum.Font.Gotham
 	UserSettingsPadUser.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserSettingsPadUser.TextSize = 13.000
+	UserSettingsPadUser.TextScaled = true
 	UserSettingsPadUser.TextXAlignment = Enum.TextXAlignment.Left
 	UserSettingsPadUser.Text = user
 	UserSettingsPadUser.Size = UDim2.new(0, UserSettingsPadUser.TextBounds.X + 2, 0, 19)
@@ -3113,7 +3113,7 @@ function DiscordLib:Window(text)
 				TextBox.PlaceholderText = placetext
 				TextBox.Text = ""
 				TextBox.TextColor3 = Color3.fromRGB(193, 195, 197)
-				TextBox.TextScaled = true
+				TextBox.TextSize = 14.000
 				TextBox.TextXAlignment = Enum.TextXAlignment.Left
 				
 				TextBox.Focused:Connect(function()
