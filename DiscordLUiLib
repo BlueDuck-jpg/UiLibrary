@@ -860,8 +860,8 @@ function DiscordLib:Window(text)
 
 		ChangeBtn.MouseButton1Click:Connect(function()
 			pfp = tostring(AvatarTextbox.Text)
-			UserImage.Image = pfp 
-			UserPanelUserImage.Image = pfp
+			UserImage.Image = "http://www.roblox.com/asset/?id=" .. pfp 
+			UserPanelUserImage.Image = "http://www.roblox.com/asset/?id=" .. pfp 
 			SaveInfo()
 
 			AvatarChange:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .2, true)
@@ -1037,7 +1037,7 @@ function DiscordLib:Window(text)
 	UserPanelUser.BackgroundTransparency = 1.000
 	UserPanelUser.Font = Enum.Font.GothamSemibold
 	UserPanelUser.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserPanelUser.TextScaled = true
+	UserPanelUser.TextSize = 17.000
 	UserPanelUser.TextXAlignment = Enum.TextXAlignment.Left
 	UserPanelUser.Text = user
 	UserPanelUser.Size = UDim2.new(0, UserPanelUser.TextBounds.X + 2, 0, 19)
