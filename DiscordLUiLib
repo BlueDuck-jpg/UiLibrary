@@ -565,7 +565,7 @@ function DiscordLib:Window(text)
 	UserSettingsPadUser.BackgroundTransparency = 1.000
 	UserSettingsPadUser.Font = Enum.Font.Gotham
 	UserSettingsPadUser.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserSettingsPadUser.TextScaled = true
+	UserSettingsPadUser.TextSize = 13.000
 	UserSettingsPadUser.TextXAlignment = Enum.TextXAlignment.Left
 	UserSettingsPadUser.Text = user
 	UserSettingsPadUser.Size = UDim2.new(0, UserSettingsPadUser.TextBounds.X + 2, 0, 19)
@@ -1037,7 +1037,7 @@ function DiscordLib:Window(text)
 	UserPanelUser.BackgroundTransparency = 1.000
 	UserPanelUser.Font = Enum.Font.GothamSemibold
 	UserPanelUser.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserPanelUser.TextSize = 17.000
+	UserPanelUser.TextScaled = true
 	UserPanelUser.TextXAlignment = Enum.TextXAlignment.Left
 	UserPanelUser.Text = user
 	UserPanelUser.Size = UDim2.new(0, UserPanelUser.TextBounds.X + 2, 0, 19)
