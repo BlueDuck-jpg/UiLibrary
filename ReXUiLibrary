@@ -111,7 +111,7 @@ function lib:Window(text, closebind)
     TabHider.Parent = Main
     TabHider.BackgroundColor3 = Color3.fromRGB(47, 49, 53)
     TabHider.BorderSizePixel = 0
-    TabHider.Position = UDim2.new(0,0,0,-37)
+    TabHider.Position = UDim2.new(0,0,0,-36)
     TabHider.Size = UDim2.new(0, 204,0, 122)
     TabHider.ZIndex = 4
     
