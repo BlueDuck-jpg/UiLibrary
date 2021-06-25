@@ -145,6 +145,14 @@ function lib:Window(text, closebind)
     TabFolder.Name = "TabFolder"
     TabFolder.Parent = Main
 
+    function lib:createNotification(Title, Text, Duration)
+        game.StarterGui:SetCore("SendNotification", {
+            Title = Title,
+            Text = Text,
+            Duration = Duration
+        }) 
+    end
+
     local tabhold = {}
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
@@ -456,7 +464,7 @@ function lib:Window(text, closebind)
             SliderTitle.Position = UDim2.new(0,38,0,0)
             SliderTitle.Size = UDim2.new(0,427,0,45)
             SliderTitle.Font = Enum.Font.Gotham
-            SliderTitle.Text = "Slider"
+            SliderTitle.Text = text
             SliderTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             SliderTitle.TextSize = 18.000
             SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
