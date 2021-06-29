@@ -5,14 +5,9 @@ local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
-local CloseBind = Enum.KeyCode.RightControl
+local CloseBind = Enum.KeyCode.Equals
 
 Flags = {}
-
-local FluxLib = Instance.new("ScreenGui")
-FluxLib.Name = "FluxLib"
-FluxLib.Parent = game.CoreGui
-FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 coroutine.wrap(
 	function()
@@ -88,6 +83,11 @@ local function MakeDraggable(topbarobject, object)
 end
 
 function Flux:Window(text, bottom,mainclr,toclose)
+	local FluxLib = Instance.new("ScreenGui")
+	FluxLib.Name = text
+	FluxLib.Parent = game.CoreGui
+	FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 	CloseBind = toclose or Enum.KeyCode.RightControl
 	PresetColor = mainclr or Color3.fromRGB(66, 134, 255)
 	local fs = false
