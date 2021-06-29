@@ -1,17 +1,3 @@
-local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-
-do
-	local ui = game:GetService("CoreGui"):FindFirstChild("RayXLib")
-	if ui then
-		ui:Destroy()
-	end
-end
-
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -24,7 +10,7 @@ local CloseBind = Enum.KeyCode.RightControl
 Flags = {}
 
 local FluxLib = Instance.new("ScreenGui")
-FluxLib.Name = "RayXLib"
+FluxLib.Name = "FluxLib"
 FluxLib.Parent = game.CoreGui
 FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -99,10 +85,6 @@ local function MakeDraggable(topbarobject, object)
 			end
 		end
 	)
-end
-
-function Flux:Destroy()
-    FluxLib:Destroy()
 end
 
 function Flux:Window(text, bottom,mainclr,toclose)
@@ -223,7 +205,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			end
 		end
 	)
-	
 	function Flux:Notification(desc,buttontitle)
 		for i, v in next, MainFrame:GetChildren() do
 			if v.Name == "NotificationBase" then
@@ -414,6 +395,11 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			{BackgroundTransparency = 0}
 		):Play()
 	end
+
+	function Flux:Destroy()
+		FluxLib:Destroy()
+	end
+
 	local Tabs = {}
 	function Tabs:Tab(text,ico)
 		local Tab = Instance.new("TextButton")
@@ -2779,3 +2765,4 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	end
 	return Tabs
 end
+return Flux
