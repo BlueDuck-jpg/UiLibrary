@@ -149,6 +149,14 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	Title.TextSize = 25.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
+	coroutine.wrap(
+        function()
+            while wait() do
+                Title.TextColor3 = PresetColor
+            end
+        end
+    )()
+
 	BottomText.Name = "BottomText"
 	BottomText.Parent = LeftFrame
 	BottomText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -400,6 +408,10 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		FluxLib:Destroy()
 	end
 
+	function Flux:ChangePresetColor(toch)
+        PresetColor = toch
+    end
+
 	local Tabs = {}
 	function Tabs:Tab(text,ico)
 		local Tab = Instance.new("TextButton")
@@ -417,6 +429,14 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		Tab.TextColor3 = Color3.fromRGB(0, 0, 0)
 		Tab.TextSize = 14.000
 		Tab.BackgroundTransparency = 1
+
+		coroutine.wrap(
+			function()
+				while wait() do
+					Tab.BackgroundColor3 = PresetColor
+				end
+			end
+		)()
 
 		TabIcon.Name = "TabIcon"
 		TabIcon.Parent = Tab
@@ -477,6 +497,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				end
 				Container.Visible = true
 			end
+
 			for i, v in next, TabHold:GetChildren() do
 				if v.Name == "Tab" then
 					TweenService:Create(
@@ -816,9 +837,17 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			ToggleFrame.Name = "ToggleFrame"
 			ToggleFrame.Parent = Circle
-			ToggleFrame.BackgroundColor3 = Color3.fromRGB(226, 227, 227)
+			ToggleFrame.BackgroundColor3 = PresetColor
 			ToggleFrame.Position = UDim2.new(33.0856934, 0, 0, 0)
 			ToggleFrame.Size = UDim2.new(0, 27, 0, 11)
+
+			coroutine.wrap(
+				function()
+					while wait() do
+						ToggleFrame.BackgroundColor3 = PresetColor
+					end
+				end
+			)()
 
 			ToggleFrameCorner.Name = "ToggleFrameCorner"
 			ToggleFrameCorner.Parent = ToggleFrame
@@ -1122,6 +1151,15 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			SlideCircle.Size = UDim2.new(0, 11, 0, 11)
 			SlideCircle.Image = "rbxassetid://3570695787"
 			SlideCircle.ImageColor3 = PresetColor
+
+			coroutine.wrap(
+				function()
+					while wait() do
+						CurrentValueFrame.BackgroundColor3 = PresetColor
+						SlideCircle.ImageColor3 = PresetColor
+					end
+				end
+			)()
 
 			ArrowBtn.Name = "ArrowBtn"
 			ArrowBtn.Parent = Slider
@@ -1957,6 +1995,14 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Toggle.TextSize = 15.000
 			Toggle.TextTransparency = 0.300
 			Toggle.TextXAlignment = Enum.TextXAlignment.Left
+
+			coroutine.wrap(
+				function()
+					while wait() do
+						Toggle.BackgroundColor3 = PresetColor
+					end
+				end
+			)()
 
 			ToggleFrame.Name = "ToggleFrame"
 			ToggleFrame.Parent = Toggle
