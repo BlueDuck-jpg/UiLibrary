@@ -666,11 +666,29 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
+					
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
 					):Play()
+
+					coroutine.wrap(
+						function()
+							while wait() do
+								ArrowIco.ImageColor3 = PresetColor
+							end
+						end
+					)()
+
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -685,6 +703,15 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
+
+						coroutine.wrap(
+							function()
+								while wait() do
+									Circle.BackgroundColor3 = PresetColor
+								end
+							end
+						)()
+
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -941,11 +968,25 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
+						coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
+						coroutine.wrap(
+						function()
+							while wait() do
+								ArrowIco.ImageColor3 = PresetColor
+							end
+						end
+					)()
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -961,6 +1002,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
+						coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -1032,6 +1080,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					ToggleCircle,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 					{BackgroundColor3 =PresetColor}
+					coroutine.wrap(
+						function()
+							while wait() do
+								ToggleCircle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 				):Play()
 				Toggled = not Toggled
 				pcall(callback, Toggled)
@@ -1202,16 +1257,37 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						Value,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Value.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								ArrowIco.ImageColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1227,6 +1303,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						CircleSmall,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1473,11 +1556,25 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								ArrowIco.ImageColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1493,6 +1590,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						CircleSmall,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2098,11 +2202,25 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						CircleSmall,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2268,6 +2386,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 							{BackgroundColor3 =PresetColor}
 						):Play()
+						coroutine.wrap(
+						function()
+							while wait() do
+								ToggleCircle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 
 						OldToggleColor = BoxColor.BackgroundColor3
 						OldColor = Color.BackgroundColor3
@@ -2544,11 +2669,25 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								ArrowIco.ImageColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2564,6 +2703,13 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						CircleSmall,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2731,16 +2877,37 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Title.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						BindLabel,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								BindLabel.TextColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
 					):Play()
+					coroutine.wrap(
+						function()
+							while wait() do
+								Circle.BackgroundColor3 = PresetColor
+							end
+						end
+					)()
 					TweenService:Create(
 						CircleSmall,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
