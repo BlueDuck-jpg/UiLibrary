@@ -430,14 +430,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		Tab.TextSize = 14.000
 		Tab.BackgroundTransparency = 1
 
-		coroutine.wrap(
-			function()
-				while wait() do
-					Tab.BackgroundColor3 = PresetColor
-				end
-			end
-		)()
-
 		TabIcon.Name = "TabIcon"
 		TabIcon.Parent = Tab
 		TabIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -455,10 +447,18 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		TabTitle.Size = UDim2.new(0, 113, 0, 19)
 		TabTitle.Font = Enum.Font.Gotham
 		TabTitle.Text = text
-		TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TabTitle.TextColor3 = PresetColor
 		TabTitle.TextSize = 15.000
 		TabTitle.TextXAlignment = Enum.TextXAlignment.Left
 		TabTitle.TextTransparency = .3
+
+		coroutine.wrap(
+			function()
+				while wait() do
+					TabTitle.TextColor3 = PresetColor
+				end
+			end
+		)()
 		
 		local Container = Instance.new("ScrollingFrame")
 		local ContainerLayout = Instance.new("UIListLayout")
@@ -919,7 +919,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 =PresetColor}
+						{BackgroundColor3 =Color3.fromRGB(255,255,255)}
 					):Play()
 				else
 					ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
