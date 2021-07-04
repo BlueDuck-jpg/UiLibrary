@@ -944,13 +944,11 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextColor3 = PresetColor}
-					)()
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{ImageColor3 = PresetColor}
-					)()
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -966,7 +964,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = PresetColor}
-					)()
 					):Play()
 					TweenService:Create(
 						CircleSmall,
